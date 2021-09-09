@@ -5,12 +5,12 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 //components
-import Navbar from "../../components/Navbar/Navbar";
+import HeroSection from "../../components/Hero/HeroSection";
 
 const HomePage = () => {
   return (
     <div className="f">
-      <Navbar />
+      <HeroSection />
     </div>
   );
 };

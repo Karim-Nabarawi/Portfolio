@@ -6,7 +6,7 @@ export const NavbarContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   .logo {
     width: 75px;
   }
@@ -18,6 +18,7 @@ export const NavSection = styled.nav`
     display: flex;
     justify-content: space-between;
     list-style: none;
+    align-items: center;
   }
 
   a,
@@ -27,5 +28,20 @@ export const NavSection = styled.nav`
     text-decoration: none;
     color: #0084ff;
     position: relative;
+  }
+`;
+
+export const ContactButton = styled.button`
+  background-color: #ffd619;
+  color: white;
+  font-size: 18px;
+  padding: 9px 25px;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: #0084ff;
   }
 `;

@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import logo from "../../images/logo.svg";
 import UnderLine from "../utilities/UnderLine";
-import { NavbarContainer, NavSection } from "./Navbar.styles";
+import { NavbarContainer, NavSection, ContactButton } from "./Navbar.styles";
 
 const Navbar = () => {
   return (
@@ -20,9 +20,9 @@ const Navbar = () => {
           <li>
             <NavBarLink title={"Projects"} goTo="/3" />
           </li>
+          <ContactButton>Contact</ContactButton>
         </ul>
       </NavSection>
-      <button>Contact</button>
     </NavbarContainer>
   );
 };
