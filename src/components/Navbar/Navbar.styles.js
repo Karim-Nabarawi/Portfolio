@@ -30,18 +30,7 @@ export const NavSection = styled.nav`
     position: relative;
   }
 `;
-
-export const ContactButton = styled.button`
-  background-color: #ffd619;
-  color: white;
-  font-size: 18px;
-  padding: 9px 25px;
-  text-decoration: none;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  &:hover {
-    background-color: #0084ff;
-  }
+export const LogoSpan = styled.span`
+  font-family: "Pacifico", cursive;
+  font-size: 48px;
 `;

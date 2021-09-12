@@ -3,7 +3,14 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 
-import HeroImage from "../../images/land page.svg";
+//Images
+import { ReactComponent as Github } from "../../images/github.svg";
+import { ReactComponent as Linkedin } from "../../images/linkedin.svg";
+
+import { ReactComponent as HeroImage } from "../../images/land page.svg";
+
+//Componets
+import Button3D from "../utilities/Button3D";
 
 const HeroSection = () => {
   return (
@@ -13,9 +20,15 @@ const HeroSection = () => {
           Hi, I'm <span className="name">Karim</span>
         </h1>
         <p>Web developer and video editor</p>
+        <Button3D text="" mainColor="#6cc644" shadowColor1="#5eac3c" shadowColor2="#457c2d">
+          <Github />
+        </Button3D>
+        <Button3D text="" mainColor="#0e76a8" shadowColor1="#0e6793" shadowColor2="#0a4c6c">
+          <Linkedin />
+        </Button3D>
       </InformationContainer>
       <ImageContainer>
-        <img src={HeroImage} alt="" />
+        <HeroImage />
       </ImageContainer>
     </HeroContainer>
   );
@@ -43,7 +56,7 @@ const InformationContainer = styled.div`
 const ImageContainer = styled.div`
   flex: 2;
 
-  img {
+  svg {
     width: 100%;
   }
 `;

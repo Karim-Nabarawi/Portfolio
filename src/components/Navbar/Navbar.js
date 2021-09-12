@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-import logo from "../../images/logo.svg";
+import GradientButton from "../utilities/GradientButton";
 import UnderLine from "../utilities/UnderLine";
-import { NavbarContainer, NavSection, ContactButton } from "./Navbar.styles";
+import { NavbarContainer, NavSection, LogoSpan } from "./Navbar.styles";
 
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <img src={logo} alt="" className="logo" />
+      <LogoSpan>K2</LogoSpan>
       <NavSection>
         <ul>
           <li>
@@ -20,7 +20,7 @@ const Navbar = () => {
           <li>
             <NavBarLink title={"Projects"} goTo="/3" />
           </li>
-          <ContactButton>Contact</ContactButton>
+          <GradientButton>Contact</GradientButton>
         </ul>
       </NavSection>
     </NavbarContainer>
