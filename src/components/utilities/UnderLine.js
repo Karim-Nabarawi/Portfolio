@@ -7,9 +7,8 @@ import { motion } from "framer-motion";
 const UnderLine = ({ active = false, color = "red" }) => {
   return (
     <LineAnimation
-      transition={{ duration: 0.75 }}
-      initial={{ width: "0%" }}
-      animate={{ width: active ? "50%" : "0%" }}
+      variants={divVariants}
+      animate={active ? "show" : "hide"}
       whileHover={{ width: "0%" }}
       color={color}
     ></LineAnimation>
@@ -25,3 +24,15 @@ export const LineAnimation = styled(motion.div)`
   margin-left: 20px;
   border-radius: 10px;
 `;
+
+const divVariants = {
+  show: {
+    width: "50%",
+    duration: 1,
+    ease: "easeIn",
+  },
+  hide: {
+    width: "0%",
+    duration: 0.5,
+  },
+};

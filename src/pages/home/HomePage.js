@@ -4,11 +4,13 @@ import React from "react";
 
 //components
 import HeroSection from "../../components/Hero/HeroSection";
+import ProjectsSection from "../../components/Projects/ProjectsSection";
 
 const HomePage = () => {
   return (
     <div className="f">
       <HeroSection />
+      <ProjectsSection />
     </div>
   );
 };

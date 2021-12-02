@@ -43,7 +43,7 @@ const HeroContainer = styled.div`
 `;
 
 const InformationContainer = styled.div`
-  flex: 1;
+  flex: 2;
   p {
     font-size: 32px;
     color: #585c60;
@@ -54,7 +54,7 @@ const InformationContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  flex: 2;
+  flex: 3;
 
   svg {
     width: 100%;
