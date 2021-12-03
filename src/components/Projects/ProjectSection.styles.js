@@ -8,4 +8,7 @@ export const ProjectsContainer = styled.div`
   }
 `;
 
-export const ProjectsHolder = styled.div``;
+export const ProjectsHolder = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
