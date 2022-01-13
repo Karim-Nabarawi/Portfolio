@@ -3,13 +3,14 @@ import React from "react";
 import styled from "styled-components";
 import Button3D from "./Button3D";
 
-const Card = ({ img }) => {
+const Card = ({ img, title, description }) => {
   return (
     <CardContainer img={img}>
       <FigureContainer>
         <img src={img} alt="project" />
         <FigureCaption>
-          <h2>An example protofolio for a photographer</h2>
+          <h2>{title}</h2>
+          <p>{description}</p>
           <Button3D>More...</Button3D>
         </FigureCaption>
       </FigureContainer>
@@ -61,14 +62,15 @@ const FigureCaption = styled.figcaption`
   right: 0;
   color: white;
   opacity: 0;
+
+  text-align: center;
   h2 {
-    margin-bottom: 30px;
+    color: #f0003c;
     line-height: 1.125;
     font-size: 24px;
   }
   &:hover {
-    background-color: #141c3a;
-    background-color: #ff8c00da;
+    background-color: #141c3ad9;
     opacity: 1;
   }
   transition: 0.45s ease-in-out;

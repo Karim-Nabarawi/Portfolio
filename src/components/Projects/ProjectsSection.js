@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     <ProjectsContainer>
       <h2>My Recent Work</h2>
       <ProjectsHolder>
-        <Card img={CaptureImg} />
+        <Card img={CaptureImg} title={"Capture Portfolio"} description={"A mock up for a photographer portofolio"} />
         <Card img={CaptureImg} />
         <Card img={CaptureImg} />
         <Card img={CaptureImg} />
