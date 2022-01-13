@@ -68,7 +68,7 @@ const FigureCaption = styled.figcaption`
   }
   &:hover {
     background-color: #141c3a;
-    background-color: rgba(0, 132, 255, 0.8);
+    background-color: #ff8c00da;
     opacity: 1;
   }
   transition: 0.45s ease-in-out;

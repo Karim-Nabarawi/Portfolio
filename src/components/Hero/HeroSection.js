@@ -19,7 +19,7 @@ const HeroSection = () => {
         <h1>
           Hi, I'm <span className="name">Karim</span>
         </h1>
-        <p>Web developer and video editor</p>
+        <p>Web developer and Animator</p>
         <Button3D text="" mainColor="#6cc644" shadowColor1="#5eac3c" shadowColor2="#457c2d">
           <Github />
         </Button3D>

@@ -7,7 +7,7 @@ import CaptureImg from "../../images/capture.png";
 const ProjectsSection = () => {
   return (
     <ProjectsContainer>
-      <h2>Projects</h2>
+      <h2>My Recent Work</h2>
       <ProjectsHolder>
         <Card img={CaptureImg} />
         <Card img={CaptureImg} />

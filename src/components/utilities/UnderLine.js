@@ -9,7 +9,7 @@ const UnderLine = ({ active = false, color = "red" }) => {
     <LineAnimation
       variants={divVariants}
       animate={active ? "show" : "hide"}
-      whileHover={{ width: "0%" }}
+      transition={{ type: "tween" }}
       color={color}
     ></LineAnimation>
   );
@@ -29,7 +29,6 @@ const divVariants = {
   show: {
     width: "50%",
     duration: 1,
-    ease: "easeIn",
   },
   hide: {
     width: "0%",

@@ -1,5 +1,6 @@
 import React from "react";
-import "./app.css";
+
+import GlobalStyles from "./components/GlobalStyles";
 
 //Pages
 import HomePage from "./pages/home/HomePage";
@@ -9,6 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
+      <GlobalStyles />
       <Navbar />
       <HomePage />
     </div>

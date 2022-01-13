@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import GradientButton from "../utilities/GradientButton";
@@ -29,15 +29,21 @@ const Navbar = () => {
 export default Navbar;
 
 const NavBarLink = ({ title, goTo }) => {
-  const [hover, setHover] = useState(false);
   const { pathname } = useLocation();
-  const lineCheck = () => (goTo === pathname || hover ? true : false);
+  const [showLine, setShowLine] = useState(goTo === pathname);
+  useEffect(() => {
+    setShowLine(goTo === pathname);
+  }, [pathname, goTo]);
   return (
     <>
-      <NavLink to={goTo} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <NavLink
+        to={goTo}
+        onMouseEnter={() => (goTo !== pathname ? setShowLine(true) : "")}
+        onMouseLeave={() => (goTo !== pathname ? setShowLine(false) : "")}
+      >
         {title}
       </NavLink>
-      <UnderLine active={lineCheck()} color={"#ffd619"} />
+      <UnderLine active={showLine} color={"#ffd619"} />
     </>
   );
 };
