@@ -20,7 +20,9 @@ const Navbar = () => {
           <li>
             <NavBarLink title={"Projects"} goTo="/3" />
           </li>
-          <GradientButton>Contact</GradientButton>
+          <GradientButton border="true" mainColor="#0055b8" hollow="true">
+            Say Hi
+          </GradientButton>
         </ul>
       </NavSection>
     </NavbarContainer>

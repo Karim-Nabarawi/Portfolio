@@ -49,7 +49,7 @@ const InformationContainer = styled.div`
     color: #585c60;
   }
   .name {
-    color: #0084ff;
+    color: #0055b8;
   }
 `;
 

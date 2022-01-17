@@ -26,7 +26,10 @@ export const NavSection = styled.nav`
     display: inline-block;
     padding: 0 20px;
     text-decoration: none;
-    color: #0084ff;
+    color: black;
+    font-weight: bold;
+    /* color: #0084ff; */
+    /* color: #0055b8; */
     position: relative;
   }
 `;
