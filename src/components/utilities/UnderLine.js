@@ -19,15 +19,13 @@ export default UnderLine;
 export const LineAnimation = styled(motion.div)`
   height: 0.3rem;
   background: ${(props) => props.color};
-  width: 0%;
-  position: absolute;
-  margin-left: 20px;
   border-radius: 10px;
+  margin: auto;
 `;
 
 const divVariants = {
   show: {
-    width: "50%",
+    width: "90%",
     duration: 1,
   },
   hide: {

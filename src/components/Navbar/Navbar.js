@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import GradientButton from "../utilities/GradientButton";
 import UnderLine from "../utilities/UnderLine";
-import { NavbarContainer, NavSection, LogoSpan } from "./Navbar.styles";
+import { NavbarContainer, NavSection, LogoSpan, NavItem } from "./Navbar.styles";
 
 const Navbar = () => {
   return (
@@ -37,8 +37,9 @@ const NavBarLink = ({ title, goTo }) => {
     setShowLine(goTo === pathname);
   }, [pathname, goTo]);
   return (
-    <>
+    <NavItem>
       <NavLink
+        className={showLine ? "highlighted" : ""}
         to={goTo}
         onMouseEnter={() => (goTo !== pathname ? setShowLine(true) : "")}
         onMouseLeave={() => (goTo !== pathname ? setShowLine(false) : "")}
@@ -46,6 +47,6 @@ const NavBarLink = ({ title, goTo }) => {
         {title}
       </NavLink>
       <UnderLine active={showLine} color={"#ffd619"} />
-    </>
+    </NavItem>
   );
 };

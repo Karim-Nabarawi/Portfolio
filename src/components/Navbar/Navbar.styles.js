@@ -20,17 +20,23 @@ export const NavSection = styled.nav`
     list-style: none;
     align-items: center;
   }
+`;
 
+export const NavItem = styled.div`
+  padding: 0 20px;
   a,
   li {
     display: inline-block;
-    padding: 0 20px;
+
     text-decoration: none;
+    text-align: center;
     color: black;
-    font-weight: bold;
     /* color: #0084ff; */
     /* color: #0055b8; */
     position: relative;
+  }
+  .highlighted {
+    font-weight: bold;
   }
 `;
 export const LogoSpan = styled.span`
