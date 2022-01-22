@@ -2,6 +2,7 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 import Button3D from "./Button3D";
+import { ReactComponent as ToolsImg } from "../../images/tools full.svg";
 
 const Card = ({ img, title, description }) => {
   return (
@@ -11,7 +12,9 @@ const Card = ({ img, title, description }) => {
         <FigureCaption>
           <h2>{title}</h2>
           <p>{description}</p>
-          <Button3D>More...</Button3D>
+          <ButtonContainer>
+            <Button3D>More...</Button3D>
+          </ButtonContainer>
         </FigureCaption>
       </FigureContainer>
     </CardContainer>
@@ -22,9 +25,9 @@ export default Card;
 const CardContainer = styled.div`
   display: block;
   flex: none;
-  width: 33.3333%;
-  padding: 12px;
   position: relative;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   :hover {
     transform: scale(1.05);
   }
@@ -74,4 +77,10 @@ const FigureCaption = styled.figcaption`
     opacity: 1;
   }
   transition: 0.45s ease-in-out;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 `;
