@@ -6,13 +6,15 @@ import GlobalStyles from "./components/GlobalStyles";
 import HomePage from "./pages/home/HomePage";
 //Components
 import Navbar from "./components/Navbar/Navbar";
+import ProjectPage from "./pages/home/ProjectPage";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyles />
       <Navbar />
-      <HomePage />
+      {/* <HomePage /> */}
+      <ProjectPage />
     </div>
   );
 }
