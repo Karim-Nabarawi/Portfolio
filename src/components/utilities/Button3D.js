@@ -66,6 +66,9 @@ const Front = styled.span`
     fill: white;
     width: 30px;
     height: 30px;
+    path {
+      fill: white;
+    }
   }
 `;
 

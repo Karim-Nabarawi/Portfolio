@@ -69,25 +69,29 @@ const SliderShow = ({ images }) => {
 export default SliderShow;
 
 const SliderContainer = styled.div`
-  margin: 0 10%;
   .swiper-container {
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     transition: opacity 0.6s ease;
   }
-  @media (max-width: 1023px) {
+  /* @media (max-width: 1023px) {
     .swiper-container {
       height: 60vw;
     }
-  }
+  } */
+
   .swiper-slide {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
     img {
-      padding: 0px 10%;
       width: 100%;
-      -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004); */
     }
     .content {
       position: absolute;
