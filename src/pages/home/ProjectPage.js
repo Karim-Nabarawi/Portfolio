@@ -19,7 +19,7 @@ const ProjectPage = () => {
       <SliderShow images={[CaptureImg, IgniteImg, CrownImg]} />
       <DetailsContainer>
         <h1>Crown</h1>
-        <p>E-commercal website with payment using strip</p>
+        <p>E-commercal website with payment using stripe</p>
         <ToolsContainer>
           <ToolsText>
             <h2>Tools & packages</h2>
@@ -32,6 +32,8 @@ const ProjectPage = () => {
             <ToolDetail>{getToolsData("stripe").src}</ToolDetail>
           </ToolsData>
         </ToolsContainer>
+        <h2>Links</h2>
+
         <LinksContainer>
           <Button3D text="" mainColor="#6cc644" shadowColor1="#5eac3c" shadowColor2="#457c2d">
             <Github />
@@ -48,6 +50,7 @@ export default ProjectPage;
 
 const DetailsContainer = styled.div`
   text-align: center;
+  margin: 0px 10%;
 `;
 
 const ToolsContainer = styled.div`
