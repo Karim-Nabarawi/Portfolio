@@ -28,7 +28,6 @@ const tools = {
 };
 
 const GetToolsData = (name) => {
-  console.log(name);
   return tools[name] ? tools[name] : "no data";
 };
 

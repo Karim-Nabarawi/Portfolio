@@ -7,8 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/modules/effect-coverflow/effect-coverflow.min.css";
-import "swiper/modules/pagination/pagination.min.css";
-import "swiper/modules/navigation/navigation.min.css";
 
 //Styling and Animation
 import styled from "styled-components";
