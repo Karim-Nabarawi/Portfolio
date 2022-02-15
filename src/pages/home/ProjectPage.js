@@ -12,6 +12,7 @@ import SliderShow from "../../components/utilities/SliderShow";
 import Button3D from "../../components/utilities/Button3D";
 import { ReactComponent as Github } from "../../images/github.svg";
 import { ReactComponent as Website } from "../../images/website.svg";
+import Tabs from "../../components/utilities/Tabs";
 
 const ProjectPage = () => {
   return (
@@ -19,6 +20,17 @@ const ProjectPage = () => {
       <SliderShow images={[CaptureImg, IgniteImg, CrownImg]} />
       <DetailsContainer>
         <h1>Crown</h1>
+        <Tabs
+          data={
+            <ToolsData>
+              <ToolDetail>{getToolsData("reactJs").src}</ToolDetail>
+              <ToolDetail>{getToolsData("firebase").src}</ToolDetail>
+              <ToolDetail>{getToolsData("styledComponents").src}</ToolDetail>
+              <ToolDetail>{getToolsData("nodeJs").src}</ToolDetail>
+              <ToolDetail>{getToolsData("stripe").src}</ToolDetail>
+            </ToolsData>
+          }
+        />
         <p>E-commercal website with payment using stripe</p>
         <ToolsContainer>
           <ToolsText>
