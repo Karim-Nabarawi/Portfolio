@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //Styling and Animation
 import styled from "styled-components";
-import SliderShow from "../../components/utilities/SliderShow";
+import SliderShow from "../components/utilities/SliderShow";
 
-import Tools from "../../components/ProjectPage/Tools";
-import ProjectLinks from "../../components/ProjectPage/ProjectLinks";
-import GetProjectData from "../../data/ProjectsData";
+import Tools from "../components/ProjectPage/Tools";
+import ProjectLinks from "../components/ProjectPage/ProjectLinks";
+import GetProjectData from "../data/ProjectsData";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ProjectPage = ({}) => {
-  const [data, setData] = useState(GetProjectData("crown"));
-  console.log(data);
+  const params = useParams();
+  const naviagte = useNavigate();
+  const [data, setData] = useState(GetProjectData(params.name));
+  useEffect(() => {
+    if (data === "no data") naviagte("404");
+  }, [data]);
   return (
     <>
       <SliderShow images={data.images} />

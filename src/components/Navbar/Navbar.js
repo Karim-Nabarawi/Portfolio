@@ -18,7 +18,7 @@ const Navbar = () => {
             <NavBarLink title={"About"} goTo="/2" />
           </li>
           <li>
-            <NavBarLink title={"Projects"} goTo="/3" />
+            <NavBarLink title={"Projects"} goTo="/projects" />
           </li>
           <GradientButton border="true" mainColor="#0055b8" hollow="true">
             Say Hi
