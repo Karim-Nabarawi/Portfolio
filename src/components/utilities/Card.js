@@ -2,7 +2,6 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 import Button3D from "./Button3D";
-import { ReactComponent as ToolsImg } from "../../images/tools full.svg";
 
 const Card = ({ img, title, description }) => {
   return (

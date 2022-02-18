@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 
@@ -14,23 +14,30 @@ import { FreeMode, Pagination } from "swiper";
 import styled from "styled-components";
 
 export default function SliderFreeMode({ children }) {
+  const sliderSettings = {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: { clickable: true },
+    modules: [FreeMode, Pagination],
+    breakpoints: {
+      600: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+    grabCursor: true,
+    parallax: true,
+  };
+
   const [data, setData] = useState([]);
   useEffect(() => {
     console.log("ff", children[0]);
     setData(children);
   }, [children]);
   return (
-    <SliderFreeModeContainer>
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiper"
-      >
+    <SliderFreeModeContainer className="SliderWrapper">
+      <Swiper {...sliderSettings}>
         {data && data.map((child, index) => <SwiperSlide key={index}>{child}</SwiperSlide>)}
       </Swiper>
     </SliderFreeModeContainer>
@@ -64,5 +71,8 @@ const SliderFreeModeContainer = styled.div`
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+  .swiper-pagination {
+    bottom: 0px;
   }
 `;

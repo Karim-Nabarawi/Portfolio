@@ -52,7 +52,7 @@ const SliderShow = ({ images }) => {
           </span>
         </div>
       )}
-      <img src={img} />
+      <img src={img} alt="website" />
     </SwiperSlide>
   ));
 
