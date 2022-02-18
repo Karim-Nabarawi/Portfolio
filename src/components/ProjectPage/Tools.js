@@ -8,15 +8,11 @@ import getToolsData from "../../data/ToolsData";
 import styled from "styled-components";
 import ContainerHover from "../utilities/ContainerHover";
 
-const Tools = ({}) => {
+const Tools = ({ tools }) => {
   return (
     <ContainerHover title="Tools & packages">
       <SliderGrid>
-        <ToolDetail>{getToolsData("reactJs").src}</ToolDetail>
-        <ToolDetail>{getToolsData("firebase").src}</ToolDetail>
-        <ToolDetail>{getToolsData("styledComponents").src}</ToolDetail>
-        <ToolDetail>{getToolsData("nodeJs").src}</ToolDetail>
-        <ToolDetail>{getToolsData("stripe").src}</ToolDetail>
+        {tools && tools.map((tool) => <ToolDetail key={tool}>{getToolsData(tool).src}</ToolDetail>)}
       </SliderGrid>
     </ContainerHover>
   );

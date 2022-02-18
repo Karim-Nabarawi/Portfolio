@@ -15,12 +15,15 @@ import styled from "styled-components";
 
 export default function SliderFreeMode({ children }) {
   const sliderSettings = {
-    slidesPerView: 5,
-    spaceBetween: 30,
+    slidesPerView: 4,
+    spaceBetween: 10,
     freeMode: true,
     pagination: { clickable: true },
     modules: [FreeMode, Pagination],
     breakpoints: {
+      1100: {
+        slidesPerView: 5,
+      },
       600: {
         slidesPerView: 4,
         spaceBetween: 10,
@@ -32,7 +35,6 @@ export default function SliderFreeMode({ children }) {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    console.log("ff", children[0]);
     setData(children);
   }, [children]);
   return (

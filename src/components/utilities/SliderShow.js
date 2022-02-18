@@ -1,16 +1,17 @@
 import React from "react";
 
 // Import Swiper React components
-import SwiperCore, { EffectCoverflow, Parallax } from "swiper";
+import SwiperCore, { EffectCoverflow, Parallax, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/modules/effect-coverflow/effect-coverflow.min.css";
+import "swiper/modules/pagination/pagination.min.css";
 
 //Styling and Animation
 import styled from "styled-components";
-SwiperCore.use([EffectCoverflow, Parallax]);
+SwiperCore.use([EffectCoverflow, Parallax, Pagination]);
 
 const SliderShow = ({ images }) => {
   if (!images) return "";
@@ -30,6 +31,8 @@ const SliderShow = ({ images }) => {
       modifier: 1,
       slideShadows: false,
     },
+    pagination: { clickable: true },
+    modules: [Pagination],
     breakpoints: {
       600: {
         slidesPerView: 2,
@@ -77,6 +80,24 @@ const SliderContainer = styled.div`
       height: 60vw;
     }
   } */
+
+  @media (min-width: 600px) {
+    .swiper-pagination {
+      opacity: 0;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .swiper-pagination {
+    bottom: 0px;
+  }
 
   .swiper-slide {
     background-position: bottom;

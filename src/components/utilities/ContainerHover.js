@@ -28,7 +28,7 @@ const Container = styled.div`
 
 const ContainerData = styled(motion.div)`
   flex: 1;
-  min-height: 200px;
+  min-height: 175px;
   border-radius: 10px;
   padding: 20px;
   margin-top: 20px;
@@ -59,7 +59,7 @@ const ContainerData = styled(motion.div)`
   &:hover::after {
     opacity: 1;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     min-height: 150px;
   }
 `;

@@ -46,7 +46,7 @@ const NavBarLink = ({ title, goTo }) => {
       >
         {title}
       </NavLink>
-      <UnderLine active={showLine} color={"#ffd619"} />
+      <UnderLine active={showLine} color={"#3491fc"} />
     </NavItem>
   );
 };
