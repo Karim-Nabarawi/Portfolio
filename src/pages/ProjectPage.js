@@ -9,7 +9,7 @@ import ProjectLinks from "../components/ProjectPage/ProjectLinks";
 import GetProjectData from "../data/ProjectsData";
 import { useNavigate, useParams } from "react-router-dom";
 
-const ProjectPage = ({}) => {
+const ProjectPage = () => {
   const params = useParams();
   const naviagte = useNavigate();
   const [data, setData] = useState(GetProjectData(params.name));

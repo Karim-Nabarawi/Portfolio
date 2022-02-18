@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
+import { ReactComponent as HamburgerIcon } from "../../images/Hamburger_icon.svg";
+
 import GradientButton from "../utilities/GradientButton";
 import UnderLine from "../utilities/UnderLine";
-import { NavbarContainer, NavSection, LogoSpan, NavItem } from "./Navbar.styles";
+import { NavbarContainer, NavSection, NavSectionMobile, LogoSpan, NavItem, IconConatiner } from "./Navbar.styles";
 
 const Navbar = () => {
   return (
@@ -20,11 +22,14 @@ const Navbar = () => {
           <li>
             <NavBarLink title={"Projects"} goTo="/projects" />
           </li>
-          <GradientButton border="true" mainColor="#0055b8" hollow="true">
-            Say Hi
-          </GradientButton>
+          <li>
+            <GradientButton border="true" mainColor="#0055b8" hollow="true">
+              Say Hi
+            </GradientButton>
+          </li>
         </ul>
       </NavSection>
+      <NavBarMobile />
     </NavbarContainer>
   );
 };
@@ -48,5 +53,37 @@ const NavBarLink = ({ title, goTo }) => {
       </NavLink>
       <UnderLine active={showLine} color={"#3491fc"} />
     </NavItem>
+  );
+};
+
+const NavBarMobile = () => {
+  const [openSideMenu, setOpenSideMenu] = useState(false);
+  const { pathname } = useLocation();
+
+  return (
+    <>
+      <NavSectionMobile className={openSideMenu ? "active-menu" : ""}>
+        <div className="container">
+          <div className="header">
+            <h2>Menu</h2>
+            <IconConatiner onClick={() => setOpenSideMenu(!openSideMenu)}>
+              <HamburgerIcon fill="white" />
+            </IconConatiner>
+          </div>
+          <NavLink to="/" className={"/" === pathname ? "active" : ""}>
+            Home
+          </NavLink>
+          <NavLink to="about" className={"about" === pathname ? "active" : ""}>
+            About
+          </NavLink>
+          <NavLink to="projects" className={"projects" === pathname ? "active" : ""}>
+            Projects
+          </NavLink>
+        </div>
+      </NavSectionMobile>
+      <IconConatiner onClick={() => setOpenSideMenu(!openSideMenu)}>
+        <HamburgerIcon />
+      </IconConatiner>
+    </>
   );
 };

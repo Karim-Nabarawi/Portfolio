@@ -40,6 +40,9 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const InformationContainer = styled.div`
