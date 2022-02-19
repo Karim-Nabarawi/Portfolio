@@ -46,11 +46,11 @@ export const NavSectionMobile = styled.div`
   background-color: whitesmoke;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
   overflow: scroll;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 0.5s ease;
   opacity: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   display: none;
   background: #0055b8;
   padding: 30px 0px;

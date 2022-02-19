@@ -3,14 +3,14 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 
-const Button3D = ({ children, ...data }) => {
+const Button3D = ({ children, onClick, ...data }) => {
   const theme = {
     mainColor: data.mainColor ? data.mainColor : "#f0003c",
     shadowColor: data.shadowColor1 ? data.shadowColor1 : "#52001b",
     shadowColor2: data.shadowColor2 ? data.shadowColor2 : "#a30036",
   };
   return (
-    <Pushable>
+    <Pushable onClick={onClick}>
       <Shadow></Shadow>
       <Edge theme={theme}></Edge>
       <Front color={theme.mainColor}>

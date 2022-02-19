@@ -23,15 +23,15 @@ const links = {
 const GetLinksData = (data) => {
   const name = data.type;
   return links[name] ? (
-    <div onClick={() => (window.location.href = data.url)} key={links[name].id}>
-      <Button3D
-        mainColor={links[name].mainColor}
-        shadowColor1={links[name].shadowColor1}
-        shadowColor2={links[name].shadowColor2}
-      >
-        {links[name].src}
-      </Button3D>
-    </div>
+    <Button3D
+      mainColor={links[name].mainColor}
+      shadowColor1={links[name].shadowColor1}
+      shadowColor2={links[name].shadowColor2}
+      onClick={() => window.open(data.url, "_blank")}
+      key={links[name].id}
+    >
+      {links[name].src}
+    </Button3D>
   ) : (
     "no data"
   );

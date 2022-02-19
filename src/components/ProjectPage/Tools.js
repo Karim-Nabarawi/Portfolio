@@ -9,6 +9,7 @@ import styled from "styled-components";
 import ContainerHover from "../utilities/ContainerHover";
 
 const Tools = ({ tools }) => {
+  if (!tools) return "";
   return (
     <ContainerHover title="Tools & packages">
       <SliderGrid>

@@ -16,9 +16,9 @@ const Navbar = () => {
           <li>
             <NavBarLink title={"Home"} goTo="/" />
           </li>
-          <li>
+          {/* <li>
             <NavBarLink title={"About"} goTo="/2" />
-          </li>
+          </li> */}
           <li>
             <NavBarLink title={"Projects"} goTo="/projects" />
           </li>
@@ -71,13 +71,21 @@ const NavBarMobile = () => {
               <HamburgerIcon fill="white" />
             </IconConatiner>
           </div>
-          <NavLink to="/" className={"/" === currentPathName ? "active" : ""}>
+          <NavLink to="/" className={"/" === currentPathName ? "active" : ""} onClick={() => setOpenSideMenu(false)}>
             Home
           </NavLink>
-          <NavLink to="about" className={"about" === currentPathName ? "active" : ""}>
+          {/* <NavLink
+            to="about"
+            className={"about" === currentPathName ? "active" : ""}
+            onClick={() => setOpenSideMenu(false)}
+          >
             About
-          </NavLink>
-          <NavLink to="projects" className={"projects" === currentPathName ? "active" : ""}>
+          </NavLink> */}
+          <NavLink
+            to="projects"
+            className={"projects" === currentPathName ? "active" : ""}
+            onClick={() => setOpenSideMenu(false)}
+          >
             Projects
           </NavLink>
         </div>

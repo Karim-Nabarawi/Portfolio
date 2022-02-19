@@ -42,11 +42,7 @@ const ProjectsContainer = styled.div`
   .gear {
     position: absolute;
     width: 20%;
-    @media screen and (max-width: 700px) {
-      display: none;
-    }
   }
-
   .top-gear-left {
     top: 20px;
     left: 20px;
@@ -65,5 +61,13 @@ const ProjectsContainer = styled.div`
     bottom: 20px;
     left: 0;
     transform: rotateZ(270deg);
+  }
+
+  @media screen and (max-width: 700px) {
+    border-radius: 0px;
+    margin: 0px;
+    .gear {
+      display: none;
+    }
   }
 `;

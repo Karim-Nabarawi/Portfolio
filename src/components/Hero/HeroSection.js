@@ -20,10 +20,23 @@ const HeroSection = () => {
           Hi, I'm <span className="name">Karim</span>
         </h1>
         <p>Web developer and Animator</p>
-        <Button3D text="" mainColor="#6cc644" shadowColor1="#5eac3c" shadowColor2="#457c2d">
+        <Button3D
+          text=""
+          mainColor="#6cc644"
+          shadowColor1="#5eac3c"
+          shadowColor2="#457c2d"
+          onClick={() => window.open("https://github.com/Karim-Nabarawi", "_blank")}
+        >
           <Github />
         </Button3D>
-        <Button3D text="" mainColor="#0e76a8" shadowColor1="#0e6793" shadowColor2="#0a4c6c">
+
+        <Button3D
+          text=""
+          mainColor="#0e76a8"
+          shadowColor1="#0e6793"
+          shadowColor2="#0a4c6c"
+          onClick={() => window.open("https://www.linkedin.com/in/karim-el-nabarawi-5609b51b5/", "_blank")}
+        >
           <Linkedin />
         </Button3D>
       </InformationContainer>
