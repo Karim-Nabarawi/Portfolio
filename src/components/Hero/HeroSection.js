@@ -49,7 +49,7 @@ const InformationContainer = styled.div`
   flex: 2;
   p {
     font-size: 32px;
-    color: #585c60;
+    color: #4f4f4f;
   }
   .name {
     color: #0055b8;

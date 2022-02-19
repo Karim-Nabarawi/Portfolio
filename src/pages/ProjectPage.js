@@ -38,6 +38,7 @@ const DetailsContainer = styled.div`
   margin: 0px 10% 50px 10%;
   p {
     margin: 50px 0px;
+    color: #4f4f4f;
   }
 `;
 const DataContainer = styled.div`

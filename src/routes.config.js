@@ -4,13 +4,17 @@ import ErrorPage from "./pages/ErrorPage";
 //Pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 const GetRoutes = () => {
   const routes = useRoutes([
     { path: "/", element: <HomePage /> },
     {
-      path: "projects/:name",
-      element: <ProjectPage />,
+      path: "projects/",
+      children: [
+        { path: "", element: <ProjectsPage /> },
+        { path: ":name", element: <ProjectPage /> },
+      ],
     },
     { path: "*", element: <ErrorPage /> },
   ]);

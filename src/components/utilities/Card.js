@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 //Styling and Animation
 import styled from "styled-components";
@@ -6,11 +6,12 @@ import Button3D from "./Button3D";
 
 const Card = ({ img, title, description }) => {
   const navigate = useNavigate();
+  const [showFigure, setShowFigure] = useState(false);
   return (
-    <CardContainer img={img}>
+    <CardContainer img={img} onTouchStart={() => setShowFigure(!showFigure)}>
       <FigureContainer>
         <img src={img} alt="project" />
-        <FigureCaption>
+        <FigureCaption className={showFigure ? "hoverChange" : ""}>
           <h2>{title}</h2>
           <p>{description}</p>
           <ButtonContainer onClick={() => navigate(`projects/${title}`)}>
@@ -29,9 +30,16 @@ const CardContainer = styled.div`
   position: relative;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  :hover {
+  width: 100%;
+  &:hover {
     transform: scale(1.05);
   }
+
+  .hoverChange {
+    background-color: #141c3ad9;
+    opacity: 1;
+  }
+
   transition: 0.45s ease-in-out;
 `;
 
@@ -66,7 +74,6 @@ const FigureCaption = styled.figcaption`
   right: 0;
   color: white;
   opacity: 0;
-
   text-align: center;
   h2 {
     color: #f0003c;
@@ -77,6 +84,7 @@ const FigureCaption = styled.figcaption`
     background-color: #141c3ad9;
     opacity: 1;
   }
+
   transition: 0.45s ease-in-out;
 `;
 
