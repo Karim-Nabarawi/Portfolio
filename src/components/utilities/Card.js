@@ -14,7 +14,7 @@ const Card = ({ img, title, description }) => {
         <FigureCaption className={showFigure ? "hoverChange" : ""}>
           <h2>{title}</h2>
           <p>{description}</p>
-          <ButtonContainer onClick={() => navigate(`projects/${title}`)}>
+          <ButtonContainer onClick={() => navigate(`/projects/${title}`)}>
             <Button3D>More...</Button3D>
           </ButtonContainer>
         </FigureCaption>
