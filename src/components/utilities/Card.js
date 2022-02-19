@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 //Styling and Animation
 import styled from "styled-components";
 import Button3D from "./Button3D";
 
 const Card = ({ img, title, description }) => {
+  const navigate = useNavigate();
   return (
     <CardContainer img={img}>
       <FigureContainer>
@@ -11,7 +13,7 @@ const Card = ({ img, title, description }) => {
         <FigureCaption>
           <h2>{title}</h2>
           <p>{description}</p>
-          <ButtonContainer>
+          <ButtonContainer onClick={() => navigate(`projects/${title}`)}>
             <Button3D>More...</Button3D>
           </ButtonContainer>
         </FigureCaption>

@@ -15,17 +15,17 @@ import styled from "styled-components";
 
 export default function SliderFreeMode({ children }) {
   const sliderSettings = {
-    slidesPerView: 4,
+    slidesPerView: children.length < 5 ? children.length : 4,
     spaceBetween: 10,
     freeMode: true,
     pagination: { clickable: true },
     modules: [FreeMode, Pagination],
     breakpoints: {
       1100: {
-        slidesPerView: 5,
+        slidesPerView: children.length < 5 ? children.length : 5,
       },
       600: {
-        slidesPerView: 4,
+        slidesPerView: children.length < 5 ? children.length : 4,
         spaceBetween: 10,
       },
     },

@@ -13,6 +13,7 @@ const ProjectPage = () => {
   const params = useParams();
   const naviagte = useNavigate();
   const [data, setData] = useState(GetProjectData(params.name));
+
   useEffect(() => {
     if (data === "no data") naviagte("404");
   }, [data]);

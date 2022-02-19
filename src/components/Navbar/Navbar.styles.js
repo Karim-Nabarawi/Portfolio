@@ -49,7 +49,9 @@ export const NavSectionMobile = styled.div`
   transform: translateX(-100%);
   transition: all 0.5s ease;
   opacity: 0;
-
+  width: 100%;
+  z-index: 1;
+  display: none;
   background: #0055b8;
   padding: 30px 0px;
   h2 {
@@ -84,9 +86,9 @@ export const NavSectionMobile = styled.div`
     color: #0055b8;
     font-weight: bold;
   }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    z-index: 1;
+
+  @media screen and (max-width: 700px) {
+    display: block;
   }
 `;
 

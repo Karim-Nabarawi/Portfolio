@@ -37,17 +37,18 @@ export default Navbar;
 
 const NavBarLink = ({ title, goTo }) => {
   const { pathname } = useLocation();
-  const [showLine, setShowLine] = useState(goTo === pathname);
+  let currentPathName = "/" + pathname.split("/")[1];
+  const [showLine, setShowLine] = useState(goTo === currentPathName);
   useEffect(() => {
-    setShowLine(goTo === pathname);
-  }, [pathname, goTo]);
+    setShowLine(goTo === currentPathName);
+  }, [currentPathName, goTo]);
   return (
     <NavItem>
       <NavLink
         className={showLine ? "highlighted" : ""}
         to={goTo}
-        onMouseEnter={() => (goTo !== pathname ? setShowLine(true) : "")}
-        onMouseLeave={() => (goTo !== pathname ? setShowLine(false) : "")}
+        onMouseEnter={() => (goTo !== currentPathName ? setShowLine(true) : "")}
+        onMouseLeave={() => (goTo !== currentPathName ? setShowLine(false) : "")}
       >
         {title}
       </NavLink>
@@ -59,7 +60,7 @@ const NavBarLink = ({ title, goTo }) => {
 const NavBarMobile = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
   const { pathname } = useLocation();
-
+  let currentPathName = "/" + pathname.split("/")[1];
   return (
     <>
       <NavSectionMobile className={openSideMenu ? "active-menu" : ""}>
@@ -70,13 +71,13 @@ const NavBarMobile = () => {
               <HamburgerIcon fill="white" />
             </IconConatiner>
           </div>
-          <NavLink to="/" className={"/" === pathname ? "active" : ""}>
+          <NavLink to="/" className={"/" === currentPathName ? "active" : ""}>
             Home
           </NavLink>
-          <NavLink to="about" className={"about" === pathname ? "active" : ""}>
+          <NavLink to="about" className={"about" === currentPathName ? "active" : ""}>
             About
           </NavLink>
-          <NavLink to="projects" className={"projects" === pathname ? "active" : ""}>
+          <NavLink to="projects" className={"projects" === currentPathName ? "active" : ""}>
             Projects
           </NavLink>
         </div>

@@ -2,6 +2,7 @@ import { ReactComponent as ReactLogo } from "../images/React Logo.svg";
 import { ReactComponent as FirebaseLogo } from "../images/Firebase Logo.svg";
 import { ReactComponent as NodeLogo } from "../images/Node.js logo.svg";
 import { ReactComponent as StripeLogo } from "../images/Stripe Logo.svg";
+import { ReactComponent as SassLogo } from "../images/Sass Logo.svg";
 import StyledComponentsLogo from "../images/styled-components.png";
 
 const tools = {
@@ -24,6 +25,10 @@ const tools = {
   styledComponents: {
     id: 4,
     src: <img src={StyledComponentsLogo} alt="styled-Components" />,
+  },
+  sass: {
+    id: 5,
+    src: <SassLogo />,
   },
 };
 
