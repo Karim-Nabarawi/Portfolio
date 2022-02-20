@@ -19,7 +19,7 @@ const ProjectPage = () => {
   }, [data]);
   return (
     <>
-      <SliderShow images={data.images} />
+      <SliderShow images={data.images} video={data.video} />
       <DetailsContainer>
         <h1>{data.title}</h1>
         <p>{data.description}</p>

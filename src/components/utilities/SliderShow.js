@@ -13,8 +13,8 @@ import "swiper/modules/pagination/pagination.min.css";
 import styled from "styled-components";
 SwiperCore.use([EffectCoverflow, Parallax, Pagination]);
 
-const SliderShow = ({ images }) => {
-  if (!images) return "";
+const SliderShow = ({ images, video }) => {
+  if (!images && !video) return "";
   const sliderSettings = {
     id: "main",
     tag: "section",
@@ -43,7 +43,7 @@ const SliderShow = ({ images }) => {
     parallax: true,
   };
   const slides = images.map((img, index) => (
-    <SwiperSlide key={`slide-${index}`} className="swiper-slide" style={{ backgroundImage: `url(${"d"})` }}>
+    <SwiperSlide key={`slide-${index}`} className="swiper-slide">
       {img.data && (
         <div className="content">
           <p className="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">
@@ -62,6 +62,19 @@ const SliderShow = ({ images }) => {
   return (
     <SliderContainer>
       <Swiper {...sliderSettings} className="swiper-container">
+        {video && (
+          <SwiperSlide className="swiper-slide">
+            <iframe
+              width="560"
+              height="315"
+              src={video}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </SwiperSlide>
+        )}
         {slides}
       </Swiper>
     </SliderContainer>
@@ -106,12 +119,19 @@ const SliderContainer = styled.div`
     border-radius: 20px;
     overflow: hidden;
     padding: 20px;
-    img {
+    height: auto;
+    img,
+    iframe {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       /* -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004); */
     }
+
+    iframe {
+      height: 100%;
+    }
+
     .content {
       position: absolute;
       top: 40%;

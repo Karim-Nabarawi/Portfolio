@@ -12,7 +12,6 @@ const ProjectsSection = ({ data }) => {
         data
           .slice(0, 8)
           .map((proj) => <Card key={proj.id} img={proj.images[0]} title={proj.title} description={proj.subTitle} />)}
-      <Card img={IgniteImg} title={"Ignite"} description={"Check games Info"} />
     </ProjectsHolder>
   );
 };

@@ -1,5 +1,6 @@
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Website } from "../images/website.svg";
+import { ReactComponent as Youtube } from "../images/Play icon.svg";
 
 import Button3D from "../components/utilities/Button3D";
 
@@ -17,6 +18,13 @@ const links = {
     mainColor: "#0e76a8",
     shadowColor1: "#0e6793",
     shadowColor2: "#0a4c6c",
+  },
+  youtube: {
+    id: 2,
+    src: <Youtube />,
+    mainColor: "#FF0000",
+    shadowColor1: "#a11d1d",
+    shadowColor2: "#692525",
   },
 };
 

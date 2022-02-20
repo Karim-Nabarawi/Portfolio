@@ -10,6 +10,12 @@ import waveImg3 from "../images/screenshots/wave/wave playing.png";
 import captureImg1 from "../images/screenshots/capture/capture homepage.png";
 import captureImg2 from "../images/screenshots/capture/capture work.png";
 import captureImg3 from "../images/screenshots/capture/capture example.png";
+import wormsImg1 from "../images/screenshots/worms/worms1.png";
+import wormsImg2 from "../images/screenshots/worms/worms2.png";
+import wormsImg3 from "../images/screenshots/worms/worms3.png";
+import igniteImg1 from "../images/screenshots/ignite/ignite Homepage.png";
+import igniteImg2 from "../images/screenshots/ignite/ignite gameDetails.png";
+import igniteImg3 from "../images/screenshots/ignite/ignite search.png";
 
 const projects = {
   Crown: {
@@ -33,8 +39,8 @@ const projects = {
     description: "An online music player using Reactjs for frontend",
     tools: ["reactJs", "sass"],
     links: [
-      { type: "github", url: "https://github.com/Karim-Nabarawi/E-Commerce" },
-      { type: "website", url: "https://muswave.netlify.app" },
+      { type: "github", url: "https://github.com/Karim-Nabarawi/Music-app" },
+      { type: "website", url: "https://muswave.herokuapp.com/" },
     ],
   },
   Capture: {
@@ -47,6 +53,29 @@ const projects = {
     links: [
       { type: "github", url: "https://github.com/Karim-Nabarawi/Capture" },
       { type: "website", url: "https://karim-nabarawi.github.io/Capture/#/" },
+    ],
+  },
+  Worms: {
+    id: 3,
+    images: [wormsImg1, wormsImg2, wormsImg3],
+    title: "Worms",
+    subTitle: "Animation about purpose of worms",
+    video: "https://www.youtube.com/embed/qry-ntltHnU",
+    description:
+      "Youtube video discussing why did god create worms in earth using Adobe illustrator, Adobe After effects & Adobe Premiere",
+    tools: ["afterEffects", "illustrator", "premiere"],
+    links: [{ type: "youtube", url: "https://www.youtube.com/watch?v=qry-ntltHnU" }],
+  },
+  Ignite: {
+    id: 4,
+    images: [igniteImg1, igniteImg2, igniteImg3],
+    title: "Ignite",
+    subTitle: "Games news",
+    description: "Games news and search using rawg api, Reactjs for frontend and Redux for state management",
+    tools: ["reactJs", "styledComponents", "framerMotion"],
+    links: [
+      { type: "github", url: "https://github.com/Karim-Nabarawi/ignite" },
+      { type: "website", url: "https://ignite47.herokuapp.com/" },
     ],
   },
 };
