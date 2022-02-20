@@ -4,8 +4,12 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const GradientButton = ({ children, ...styles }) => {
-  return <ContactButton data={styles}>{children}</ContactButton>;
+const GradientButton = ({ children, onClick, ...styles }) => {
+  return (
+    <ContactButton data={styles} onClick={onClick}>
+      {children}
+    </ContactButton>
+  );
 };
 export default GradientButton;
 

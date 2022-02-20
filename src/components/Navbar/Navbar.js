@@ -23,7 +23,14 @@ const Navbar = () => {
             <NavBarLink title={"Projects"} goTo="/projects" />
           </li>
           <li>
-            <GradientButton border="true" mainColor="#0055b8" hollow="true">
+            <GradientButton
+              border="true"
+              mainColor="#0055b8"
+              hollow="true"
+              onClick={() => {
+                window.open("mailto:k.nabarawi@gmail.com");
+              }}
+            >
               Say Hi
             </GradientButton>
           </li>
