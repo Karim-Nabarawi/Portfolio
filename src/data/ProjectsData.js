@@ -34,7 +34,7 @@ const projects = {
     tools: ["reactJs", "sass"],
     links: [
       { type: "github", url: "https://github.com/Karim-Nabarawi/E-Commerce" },
-      { type: "website", url: "https://6210252795d6260007bd8375--muswave.netlify.app/" },
+      { type: "website", url: "https://muswave.netlify.app" },
     ],
   },
   Capture: {
