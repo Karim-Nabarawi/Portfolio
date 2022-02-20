@@ -17,9 +17,14 @@ const HeroSection = () => {
     <HeroContainer>
       <InformationContainer>
         <h1>
-          Hi, I'm <span className="name">Karim</span>
+          Hi, I'm
+          <span className="name">
+            <br />
+            Karim El-Nabarawi
+          </span>
         </h1>
-        <p>Web developer and Animator</p>
+        <h1>Web developer and Animator</h1>
+        <p>My work focus is simple but effiective desgins that will run perfectly both on low & high-end devices </p>
         <Button3D
           text=""
           mainColor="#6cc644"
@@ -53,6 +58,7 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1.2;
   @media screen and (max-width: 600px) {
     flex-direction: column;
   }
@@ -61,11 +67,16 @@ const HeroContainer = styled.div`
 const InformationContainer = styled.div`
   flex: 2;
   p {
-    font-size: 32px;
+    font-size: 24px;
     color: #4f4f4f;
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 48px;
   }
   .name {
     color: #0055b8;
+    font-size: 64px;
   }
 `;
 
