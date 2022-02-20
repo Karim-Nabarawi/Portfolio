@@ -24,7 +24,7 @@ const HeroSection = () => {
           </span>
         </h1>
         <h1>Web developer and Animator</h1>
-        <p>My work focus is simple but effiective desgins that will run perfectly both on low & high-end devices </p>
+        <p>My work focus is simple but effective designs that will run perfectly both on low & high-end devices</p>
         <Button3D
           text=""
           mainColor="#6cc644"
