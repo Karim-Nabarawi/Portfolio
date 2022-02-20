@@ -3,6 +3,7 @@ import { ReactComponent as FirebaseLogo } from "../images/Firebase Logo.svg";
 import { ReactComponent as NodeLogo } from "../images/Node.js logo.svg";
 import { ReactComponent as StripeLogo } from "../images/Stripe Logo.svg";
 import { ReactComponent as SassLogo } from "../images/Sass Logo.svg";
+import { ReactComponent as FramerMotionLogo } from "../images/Framer Logo.svg";
 import StyledComponentsLogo from "../images/styled-components.png";
 
 const tools = {
@@ -29,6 +30,10 @@ const tools = {
   sass: {
     id: 5,
     src: <SassLogo />,
+  },
+  framerMotion: {
+    id: 6,
+    src: <FramerMotionLogo />,
   },
 };
 

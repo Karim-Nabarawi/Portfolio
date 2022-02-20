@@ -7,6 +7,9 @@ import crownImg6 from "../images/screenshots/crown/crown signin.png";
 import waveImg1 from "../images/screenshots/wave/wave Homepage.png";
 import waveImg2 from "../images/screenshots/wave/wave menu.png";
 import waveImg3 from "../images/screenshots/wave/wave playing.png";
+import captureImg1 from "../images/screenshots/capture/capture homepage.png";
+import captureImg2 from "../images/screenshots/capture/capture work.png";
+import captureImg3 from "../images/screenshots/capture/capture example.png";
 
 const projects = {
   Crown: {
@@ -32,6 +35,18 @@ const projects = {
     links: [
       { type: "github", url: "https://github.com/Karim-Nabarawi/E-Commerce" },
       { type: "website", url: "https://6210252795d6260007bd8375--muswave.netlify.app/" },
+    ],
+  },
+  Capture: {
+    id: 2,
+    images: [captureImg1, captureImg2, captureImg3],
+    title: "Capture",
+    subTitle: "Photographer Portofolio",
+    description: "An online music player using Reactjs for frontend",
+    tools: ["reactJs", "sass", "framerMotion"],
+    links: [
+      { type: "github", url: "https://github.com/Karim-Nabarawi/Capture" },
+      { type: "website", url: "https://karim-nabarawi.github.io/Capture/#/" },
     ],
   },
 };
